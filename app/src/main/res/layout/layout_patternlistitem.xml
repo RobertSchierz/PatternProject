@@ -6,11 +6,18 @@
     android:padding="15dp"
     android:id="@+id/patternlist_layout">
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <!--<de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:id="@+id/image"
         android:src="@mipmap/ic_launcher"></de.hdodenhof.circleimageview.CircleImageView>
+-->
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/image"
+        android:padding="5dp"
+        android:src="@mipmap/ic_launcher"></ImageView>
 
     <TextView
         android:layout_width="wrap_content"
