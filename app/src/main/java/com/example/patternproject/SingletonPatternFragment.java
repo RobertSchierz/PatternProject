@@ -17,10 +17,10 @@ import com.google.android.material.tabs.TabLayout;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link BubbleSortFragment#newInstance} factory method to
+ * Use the {@link SingletonPatternFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BubbleSortFragment extends Fragment {
+public class SingletonPatternFragment extends Fragment {
 
     private ViewPager viewPager;
     private TabLayout tabLayout;
@@ -28,7 +28,6 @@ public class BubbleSortFragment extends Fragment {
     private ExplainFragment explainFragment;
     private CodeFragment codeFragment;
     private ExampleFragment exampleFragment;
-
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -39,7 +38,7 @@ public class BubbleSortFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public BubbleSortFragment() {
+    public SingletonPatternFragment() {
         // Required empty public constructor
     }
 
@@ -49,11 +48,11 @@ public class BubbleSortFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment BubbleSortFragment.
+     * @return A new instance of fragment SingletonPatternFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static BubbleSortFragment newInstance(String param1, String param2) {
-        BubbleSortFragment fragment = new BubbleSortFragment();
+    public static SingletonPatternFragment newInstance(String param1, String param2) {
+        SingletonPatternFragment fragment = new SingletonPatternFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -68,14 +67,11 @@ public class BubbleSortFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         View view = inflater.inflate(R.layout.fragment_bubble_sort, container, false);
 
         viewPager = view.findViewById(R.id.fragmentviewpager);
@@ -104,7 +100,7 @@ public class BubbleSortFragment extends Fragment {
         tabLayout.getTabAt(2).setIcon(R.drawable.ic_baseline_remove_red_eye_24);
 
         TextView header = (TextView)view.findViewById(R.id.list_item_header_text);
-        header.setText(R.string.bubbleSortHeader);
+        header.setText(R.string.singletonPatternHeader);
 
 
         // Inflate the layout for this fragment

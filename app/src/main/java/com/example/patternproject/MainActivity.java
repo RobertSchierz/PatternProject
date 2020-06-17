@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements PatternlistAdapte
 
     private void initImageBitmaps(){
 
-        mPatternNames.add("Pattern");
+        mPatternNames.add("Singleton Pattern");
         mPatternImagePaths.add(R.drawable.pattern);
 
         mPatternNames.add("Bubble Sort");

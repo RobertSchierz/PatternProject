@@ -5,13 +5,22 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager.widget.ViewPager;
+
+import com.example.patternproject.listfragments.CodeFragment;
+import com.example.patternproject.listfragments.ExampleFragment;
+import com.example.patternproject.listfragments.ExplainFragment;
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
@@ -22,14 +31,21 @@ public class ListItemActivity extends FragmentActivity  {
 
     private ArrayList<TutorialListItems> items = new ArrayList<TutorialListItems>();
 
+
+
+
     public ListItemActivity() {
         items.add(new TutorialListItems("Bubble Sort", new BubbleSortFragment()));
+        items.add(new TutorialListItems("Singleton Pattern", new SingletonPatternFragment()));
     }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listitem);
+
+
+
 
         Intent intent = getIntent();
         int position = intent.getIntExtra("itemPosition", 0);
@@ -57,11 +73,11 @@ public class ListItemActivity extends FragmentActivity  {
 
 
 
-        //TextView fragmentHeaderText = findViewById(R.id.listitemfragment_header);
-       // fragmentHeaderText.setText(itemName);
 
         Log.d(TAG, "Activity created: " + position);
     }
+
+
 }
 
 class TutorialListItems{

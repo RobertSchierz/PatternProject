@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Java Coding Tutorials</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="bubbleSortHeader">Bubble Sort</string>
+    <string name="singletonPatternHeader">Singleton Pattern</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
