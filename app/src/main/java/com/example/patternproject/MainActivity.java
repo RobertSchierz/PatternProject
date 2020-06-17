@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements PatternlistAdapte
     @Override
     public void onItemClicked(int position) {
         Intent intent = new Intent(this, ListItemActivity.class);
+        intent.putExtra("itemName", mPatternNames.get(position));
         intent.putExtra("itemPosition", position);
         startActivity(intent);
     }
