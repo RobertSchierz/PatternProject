@@ -10,9 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.patternproject.listfragments.CodeFragment;
-import com.example.patternproject.listfragments.ExampleFragment;
-import com.example.patternproject.listfragments.ExplainFragment;
+import com.example.patternproject.listitemscontent.BubbleSortCodeFragment;
+import com.example.patternproject.listitemscontent.BubbleSortExampleFragment;
+import com.example.patternproject.listitemscontent.BubbleSortExplainFragment;
 import com.google.android.material.tabs.TabLayout;
 
 /**
@@ -25,9 +25,9 @@ public class BubbleSortFragment extends Fragment {
     private ViewPager viewPager;
     private TabLayout tabLayout;
 
-    private ExplainFragment explainFragment;
-    private CodeFragment codeFragment;
-    private ExampleFragment exampleFragment;
+    private BubbleSortExplainFragment explainFragment;
+    private BubbleSortCodeFragment codeFragment;
+    private BubbleSortExampleFragment exampleFragment;
 
 
     // TODO: Rename parameter arguments, choose names that match
@@ -81,9 +81,9 @@ public class BubbleSortFragment extends Fragment {
         viewPager = view.findViewById(R.id.fragmentviewpager);
         tabLayout = view.findViewById(R.id.fragmenttablayout);
 
-        explainFragment = new ExplainFragment();
-        codeFragment =  new CodeFragment();
-        exampleFragment = new ExampleFragment();
+        explainFragment = new BubbleSortExplainFragment();
+        codeFragment =  new BubbleSortCodeFragment();
+        exampleFragment = new BubbleSortExampleFragment();
 
         tabLayout.setupWithViewPager(viewPager);
 

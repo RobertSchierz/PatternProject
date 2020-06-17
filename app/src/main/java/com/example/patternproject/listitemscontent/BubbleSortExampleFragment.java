@@ -1,4 +1,4 @@
-package com.example.patternproject.listfragments;
+package com.example.patternproject.listitemscontent;
 
 import android.os.Bundle;
 
@@ -12,10 +12,10 @@ import com.example.patternproject.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ExampleFragment#newInstance} factory method to
+ * Use the {@link BubbleSortExampleFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ExampleFragment extends Fragment {
+public class BubbleSortExampleFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class ExampleFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public ExampleFragment() {
+    public BubbleSortExampleFragment() {
         // Required empty public constructor
     }
 
@@ -39,8 +39,8 @@ public class ExampleFragment extends Fragment {
      * @return A new instance of fragment ExampleFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ExampleFragment newInstance(String param1, String param2) {
-        ExampleFragment fragment = new ExampleFragment();
+    public static BubbleSortExampleFragment newInstance(String param1, String param2) {
+        BubbleSortExampleFragment fragment = new BubbleSortExampleFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,6 +61,6 @@ public class ExampleFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_example, container, false);
+        return inflater.inflate(R.layout.bubble_sort_fragment_example, container, false);
     }
 }

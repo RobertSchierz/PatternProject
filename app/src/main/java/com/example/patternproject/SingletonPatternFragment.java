@@ -10,9 +10,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.patternproject.listfragments.CodeFragment;
-import com.example.patternproject.listfragments.ExampleFragment;
-import com.example.patternproject.listfragments.ExplainFragment;
+import com.example.patternproject.listitemscontent.BubbleSortCodeFragment;
+import com.example.patternproject.listitemscontent.BubbleSortExampleFragment;
+import com.example.patternproject.listitemscontent.BubbleSortExplainFragment;
+import com.example.patternproject.listitemscontent.SingletonPatternCodeFragment;
+import com.example.patternproject.listitemscontent.SingletonPatternExampleFragment;
+import com.example.patternproject.listitemscontent.SingletonPatternExplainFragment;
 import com.google.android.material.tabs.TabLayout;
 
 /**
@@ -25,9 +28,9 @@ public class SingletonPatternFragment extends Fragment {
     private ViewPager viewPager;
     private TabLayout tabLayout;
 
-    private ExplainFragment explainFragment;
-    private CodeFragment codeFragment;
-    private ExampleFragment exampleFragment;
+    private SingletonPatternExplainFragment explainFragment;
+    private SingletonPatternCodeFragment codeFragment;
+    private SingletonPatternExampleFragment exampleFragment;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -77,9 +80,9 @@ public class SingletonPatternFragment extends Fragment {
         viewPager = view.findViewById(R.id.fragmentviewpager);
         tabLayout = view.findViewById(R.id.fragmenttablayout);
 
-        explainFragment = new ExplainFragment();
-        codeFragment =  new CodeFragment();
-        exampleFragment = new ExampleFragment();
+        explainFragment = new SingletonPatternExplainFragment();
+        codeFragment =  new SingletonPatternCodeFragment();
+        exampleFragment = new SingletonPatternExampleFragment();
 
         tabLayout.setupWithViewPager(viewPager);
 
