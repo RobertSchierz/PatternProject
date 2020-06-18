@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="bubblesortcodecontent">
+      <![CDATA[  public static int[] bubblesort(int[] zusortieren) {\n
+		int temp;\n
+		for(int i=1; i <zusortieren.length; i++) {\n
+		\t	for(int j=0; j<zusortieren.length-i; j++) {\n
+		\t\t	if(zusortieren[j]>zusortieren[j+1]) {\n
+		\t\t\t		temp=zusortieren[j];\n
+		\t\t\t		zusortieren[j]=zusortieren[j+1];\n
+		\t\t\t		zusortieren[j+1]=temp;\n
+		\t\t	}\n\n
+
+		\t	}\n
+		}\n
+		return zusortieren;\n
+	}\n
+
+    ]]></string>
+</resources>

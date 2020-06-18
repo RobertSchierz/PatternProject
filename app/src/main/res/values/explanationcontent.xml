@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="singleton_explanation_text">
+        Wie lässt sich sicherstellen, dass nur ein Objekt einer Klasse erstellt werden kann?\n\nIndem die Objektbildung in der Klasse selbst erfolgt und das Objekt als statische Instanz abgerufen werden kann.</string>
+    <string name="bubblesort_explanation_text">
+        Die Funktionsweise von Bubblesort ist simpel. \n\nNacheinander werden in einem Array immer zwei aufeinander folgende Elemente verglichen und ggf. miteinander vertauscht. \n\nSo ergibt sich nach und nach die gewünschte Reihenfolge. \nDer Algorithmus ist dann zu Ende, wenn es keine Vertauschungen mehr gibt. </string>
+
+</resources>

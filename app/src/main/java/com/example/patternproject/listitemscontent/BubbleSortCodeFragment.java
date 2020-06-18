@@ -10,6 +10,10 @@ import android.view.ViewGroup;
 
 import com.example.patternproject.R;
 
+import io.github.kbiakov.codeview.CodeView;
+import io.github.kbiakov.codeview.highlight.ColorTheme;
+import io.github.kbiakov.codeview.highlight.Font;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link BubbleSortCodeFragment#newInstance} factory method to
@@ -60,7 +64,17 @@ public class BubbleSortCodeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.bubble_sort_fragment_code, container, false);
+
+        View view = inflater.inflate(R.layout.bubble_sort_fragment_code, container, false);
+        CodeView bubbleCodeView = (CodeView) view.findViewById(R.id.bubblesort_codecontent);
+
+        bubbleCodeView.setCode(getString(R.string.bubblesortcodecontent));
+        bubbleCodeView.getOptions()
+                .withLanguage("java")
+                .withFont(Font.Consolas)
+                .withTheme(ColorTheme.SOLARIZED_LIGHT)
+                .withShadows();
+
+        return view;
     }
 }

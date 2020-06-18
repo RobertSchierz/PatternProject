@@ -15,9 +15,12 @@ import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.function.Consumer;
 
+import io.github.kbiakov.codeview.classifier.CodeProcessor;
+
 public class ListItemActivity extends FragmentActivity  {
 
     private static final String TAG = "ListItemActivity";
+
 
     private ArrayList<TutorialListItems> items = new ArrayList<TutorialListItems>();
 
