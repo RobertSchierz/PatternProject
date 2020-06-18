@@ -78,34 +78,7 @@ public class BubbleSortFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_bubble_sort, container, false);
 
-        viewPager = view.findViewById(R.id.fragmentviewpager);
-        tabLayout = view.findViewById(R.id.fragmenttablayout);
-
-        explainFragment = new BubbleSortExplainFragment();
-        codeFragment =  new BubbleSortCodeFragment();
-        exampleFragment = new BubbleSortExampleFragment();
-
-        tabLayout.setupWithViewPager(viewPager);
-
-        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getFragmentManager(), 0);
-
-        viewPager.setAdapter(viewPagerAdapter);
-
-
-        viewPagerAdapter.addFragment(explainFragment, "Erklärung");
-        viewPagerAdapter.addFragment(codeFragment, "Code");
-        viewPagerAdapter.addFragment(exampleFragment, "Beispiel");
-
-
-
-        viewPagerAdapter.notifyDataSetChanged();
-        tabLayout.getTabAt(0).setIcon(R.drawable.ic_baseline_chat_24);
-        tabLayout.getTabAt(1).setIcon(R.drawable.ic_baseline_code_24);
-        tabLayout.getTabAt(2).setIcon(R.drawable.ic_baseline_remove_red_eye_24);
-
-        TextView header = (TextView)view.findViewById(R.id.list_item_header_text);
-        header.setText(R.string.bubbleSortHeader);
-
+        Helperclass.setTabView(view, getFragmentManager(),getString(R.string.bubbleSortHeader), new BubbleSortExplainFragment(), new BubbleSortCodeFragment(), new BubbleSortExampleFragment() );
 
         // Inflate the layout for this fragment
         return view;

@@ -7,10 +7,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.example.patternproject.Helperclass;
 import com.example.patternproject.R;
 
 import io.github.kbiakov.codeview.CodeView;
+import io.github.kbiakov.codeview.OnCodeLineClickListener;
+import io.github.kbiakov.codeview.adapters.Format;
 import io.github.kbiakov.codeview.highlight.ColorTheme;
 import io.github.kbiakov.codeview.highlight.Font;
 
@@ -66,15 +70,7 @@ public class BubbleSortCodeFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.bubble_sort_fragment_code, container, false);
-        CodeView bubbleCodeView = (CodeView) view.findViewById(R.id.bubblesort_codecontent);
-
-        bubbleCodeView.setCode(getString(R.string.bubblesortcodecontent));
-        bubbleCodeView.getOptions()
-                .withLanguage("java")
-                .withFont(Font.Consolas)
-                .withTheme(ColorTheme.SOLARIZED_LIGHT)
-                .withShadows();
-
+        Helperclass.setCodeView(view, R.id.bubblesort_codecontent, getString(R.string.bubblesortcodecontent));
         return view;
     }
 }
